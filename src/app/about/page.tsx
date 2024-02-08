@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "First Steps with Next.js - About Page",
+	description: "Description of the About Page by medine.tech",
+};
+
 export default function AboutPage() {
 	return (
 		<>
