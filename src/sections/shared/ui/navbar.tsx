@@ -1,6 +1,8 @@
 import { Home } from "lucide-react";
 import Link from "next/link";
 
+import { ActiveLink } from "@/sections/shared/ui/link";
+
 const navItems = [
 	{ label: "About", href: "/about" },
 	{ label: "Pricing", href: "/pricing" },
@@ -18,9 +20,7 @@ export const Navbar = () => {
 			<div className={"flex-1"}></div>
 
 			{navItems.map((item) => (
-				<Link key={item.href} className={"mr-2"} href={item.href}>
-					{item.label}
-				</Link>
+				<ActiveLink key={item.href} {...item} />
 			))}
 		</div>
 	);
